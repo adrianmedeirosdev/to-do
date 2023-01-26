@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <title>Tasks Manager</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Tasks manager</h1>
+      <button>
+        <i data-feather="plus"></i>
+        new task
+      </button>
+    </div>
+    <div class="tasks-container">
+      <ul>
+        <li class="task">item1
+          <span>
+            <button class="check"><i class="icon" data-feather="check-square"></i></button>
+            <button class="edit"><i class="icon" data-feather="edit"></i></button>
+            <button class="delete"><i class="icon" data-feather="trash-2"></i></button>
+          </span>
+        </li>
+        <li class="task">item2
+          <span>
+            <button class="check"><i class="icon" data-feather="check-square"></i></button>
+            <button class="edit"><i class="icon" data-feather="edit"></i></button>
+            <button class="delete"><i class="icon" data-feather="trash-2"></i></button>
+          </span>
+        </li>
+        <li class="task">item3
+          <span>
+            <button class="check"><i class="icon " data-feather="check-square"></i></button>
+            <button class="edit"><i class="icon " data-feather="edit"></i></button>
+            <button class="delete"><i class="icon " data-feather="trash-2"></i></button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="js/script.js"></script>
+<script>
+  feather.replace()
+</script>
+
+</html>
