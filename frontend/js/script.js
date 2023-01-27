@@ -11,27 +11,70 @@ btnNewTask.onclick = () => addTaskModal.showModal()
 btnCancel.onclick = () => addTaskModal.close()
 
 addTaskForm.addEventListener('submit', (e) => {
-  if (taskInput.value != "") {
-    emptyMessage.style.display = 'none'
-    tasksList.innerHTML += `
-    <li class="task" >${taskInput.value}
-      <div>
-        <button class="btn-check"><i class="icon" data-feather="check-square"></i></button>
-        <button class="btn-edit"><i class="icon" data-feather="edit"></i></button>
-        <button class="btn-delete"><i class="icon" data-feather="trash-2"></i></button>
-      </div>
-    </li>
-  `
-  }
-  taskInput.value = ''
-  feather.replace()
-  addTaskModal.close()
   e.preventDefault()
+
+  const taskInputText = taskInput.value
+
+  if (taskInputText) {
+    saveTask(taskInputText)
+  }
+
+  feather.replace()
 })
 
-// tasksList.addEventListener('click', (e) => {
+function saveTask(text) {
+  emptyMessage.style.display = 'none'
 
-// })
+  const task = document.createElement('li')
+  task.classList.add('task')
+
+  const taskText = document.createElement('h4')
+  taskText.innerText = text
+  task.appendChild(taskText)
+
+  const divButtons = document.createElement('div')
+
+  const checkBtn = document.createElement('button')
+  checkBtn.classList.add('btn-check')
+  checkBtn.innerHTML = '<i class="icon" data-feather="check-square"></i>'
+  divButtons.appendChild(checkBtn)
+
+  const editBtn = document.createElement('button')
+  editBtn.classList.add('btn-edit')
+  editBtn.innerHTML = '<i class="icon" data-feather="edit"></i>'
+  divButtons.appendChild(editBtn)
+
+  const deleteBtn = document.createElement('button')
+  deleteBtn.classList.add('btn-delete')
+  deleteBtn.innerHTML = '<i class="icon" data-feather="trash-2"></i>'
+  divButtons.appendChild(deleteBtn)
+
+  task.appendChild(divButtons)
+
+  tasksList.appendChild(task)
+
+  taskInput.value = ''
+  addTaskModal.close()
+}
+
+
+document.addEventListener('click', (e) => {
+  const targetEl = e.target
+  const parentEl = targetEl.closest("li")
+
+  if (targetEl.classList.contains('btn-check')) {
+    targetEl.classList.toggle('btn-checked')
+    parentEl.classList.toggle('task-done')
+  }
+
+  if (targetEl.classList.contains('btn-edit')) {
+
+  }
+
+  if (targetEl.classList.contains('btn-delete')) {
+    parentEl.remove()
+  }
+})
 
 
 
