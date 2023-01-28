@@ -1,14 +1,10 @@
-const btnNewTask = document.querySelector('#btn-new-task')
-const addTaskModal = document.querySelector('#add-task-modal')
-const btnCancel = document.querySelector('#btn-cancel')
+const taskModal = document.querySelector('#task-modal')
 const taskInput = document.querySelector('#task-input')
 
 const addTaskForm = document.querySelector('#add-task-form')
 const tasksList = document.querySelector('.tasks-list')
 const emptyMessage = document.querySelector('.empty-message')
 
-btnNewTask.onclick = () => addTaskModal.showModal()
-btnCancel.onclick = () => addTaskModal.close()
 
 addTaskForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -54,7 +50,7 @@ function saveTask(text) {
   tasksList.appendChild(task)
 
   taskInput.value = ''
-  addTaskModal.close()
+  taskInput.focus()
 }
 
 
@@ -68,11 +64,14 @@ document.addEventListener('click', (e) => {
   }
 
   if (targetEl.classList.contains('btn-edit')) {
-
+    taskInput.value = parentEl.innerText
+    parentEl.remove()
   }
 
   if (targetEl.classList.contains('btn-delete')) {
     parentEl.remove()
+    if (tasksList.innerText == '')
+      emptyMessage.style.display = 'flex'
   }
 })
 
