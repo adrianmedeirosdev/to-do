@@ -5,6 +5,7 @@ const addTaskForm = document.querySelector('#add-task-form')
 const tasksList = document.querySelector('.tasks-list')
 const emptyMessage = document.querySelector('.empty-message')
 
+const themeBtn = document.querySelector('#theme-btn')
 
 addTaskForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -73,6 +74,13 @@ document.addEventListener('click', (e) => {
     if (tasksList.innerText == '')
       emptyMessage.style.display = 'flex'
   }
+
+  if (targetEl.classList.contains('feather-moon')) {
+    themeBtn.innerHTML = `<i class="icon" data-feather="sun"></i>`
+  } else {
+    themeBtn.innerHTML = `<i class="icon" data-feather="moon"></i>`
+  }
+  feather.replace()
 })
 
 

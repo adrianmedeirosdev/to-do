@@ -44,6 +44,8 @@ body{
   justify-content: space-between;
 }
 
+
+
 input{
   font-weight: 500;
   border: none;
@@ -96,10 +98,11 @@ button#signup:hover{
 span{
   text-align: right;
 }
-span a {
+
+a{
+  font-size: 14px;
   color: var(--secondary-bg-color);
   text-decoration: none;
-  font-size: 14px;
 }
 
 ::-webkit-input-placeholder{
