@@ -7,27 +7,44 @@
   font-family: 'Roboto', sans-serif;
 }
 
+#light,
 :root{
-  --main-bg-color: #f5f5f5;
+  --bg-color: #f5f5f5;
+  --text-color: #101010;
+  --container-bg-color: #ffff;
   --primary-bg-color: #00ff80;
   --primary-hover-bg-color: #00d46a;
   --secondary-bg-color: #0099ff;
-  --container-bg-color: #ffff;
   --danger-bg-color: #ff3939;
   --shadow-color: #c7c7c7;
   --dark-grey: #8f8f8f;
 }
 
+#dark,
+:root:has(#dark:checked){
+  --bg-color: #101010;
+  --text-color: #f5f5f5;
+  --container-bg-color: #202020;
+  --primary-bg-color: #00ff80;
+  --primary-hover-bg-color: #00d46a;
+  --secondary-bg-color: #0099ff;
+  --danger-bg-color: #ff3939;
+  --shadow-color: #000000;
+  --dark-grey: #8f8f8f;
+}
+
 body{
-  width: 100%;
   display: flex;
-  padding: 50px;
   justify-content: center;
-  background-color: var(--main-bg-color);
+  width: 100vw;
+  height: 100%;
+  padding: 100px;
+  background-color: var(--bg-color);
+  gap: 48px;
 }
 
 .container{
-  width: 400px;
+  min-width: 400px;
   background-color: var(--container-bg-color);
   padding: 2rem;
   border-radius: 16px;
@@ -44,19 +61,21 @@ body{
   justify-content: space-between;
 }
 
+.header h1{
+  color: var(--text-color);
+}
 
-
-input{
+.container input{
   font-weight: 500;
   border: none;
   height: 38px;
   border-radius: 6px;
   padding: 18px;
-  background-color: var(--main-bg-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   box-shadow: inset -0.5px 0.5px 4px var(--shadow-color);
   outline-color: var(--primary-bg-color);
 }
-
 
 
 button{
@@ -82,6 +101,7 @@ button#signin:hover{
 
 p{
   text-align: center;
+  color: var(--shadow-color);
 }
 
 button#signup{
@@ -92,7 +112,7 @@ button#signup{
 
 button#signup:hover{
   background-color: var(--primary-bg-color);
-  color: var(--main-bg-color);
+  color: var(--container-bg-color);
 }
 
 span{
@@ -105,12 +125,47 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  color: var(--dark-grey);
+}
+
 ::-webkit-input-placeholder{
-  color: var(--shadow-color);
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+.themes{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 6px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.5rem;
+}
+
+input[type="radio"]{
+  appearance: none;
+  border: 2px solid var(--input-color);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked{
+  background-color: var(--input-color);
+}
+
+#dark{
+  --input-color: black;
 }
 
 
+#light{
+  --input-color: yellow;
+}
 
 
 

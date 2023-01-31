@@ -75,12 +75,7 @@ document.addEventListener('click', (e) => {
       emptyMessage.style.display = 'flex'
   }
 
-  if (targetEl.classList.contains('feather-moon')) {
-    themeBtn.innerHTML = `<i class="icon" data-feather="sun"></i>`
-  } else {
-    themeBtn.innerHTML = `<i class="icon" data-feather="moon"></i>`
-  }
-  feather.replace()
+
 })
 
 

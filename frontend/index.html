@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <script src="https://unpkg.com/feather-icons"></script>
-  <title>To-do Manager</title>
+  <title>To-do</title>
 </head>
 
 <body>
@@ -30,10 +31,19 @@
       </ul>
     </div>
   </div>
+  <ul class="themes">
+    <li>
+      <input id="light" type="radio" name="theme" checked>
+    </li>
+    <li>
+      <input id="dark" type="radio" name="theme">
+    </li>
+  </ul>
 </body>
-<script src="js/script.js"></script>
-<script>
-  feather.replace()
-</script>
+
+<script src="js/index.js"></script>
+<script src="js/theme.js"></script>
+<script>feather.replace()</script>
+
 
 </html>
