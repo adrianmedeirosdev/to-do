@@ -16,7 +16,9 @@
   --primary-bg-color: #00ff80;
   --primary-hover-bg-color: #00d46a;
   --secondary-bg-color: #0099ff;
-  --danger-bg-color: #ff3939;
+  --secondary-hover-bg-color: #0084db;
+  --danger-bg-color: #ff3c3c;
+  --danger-hover-bg-color: #ff1616;
   --shadow-color: #c7c7c7;
   --dark-grey: #8f8f8f;
   --placeholder-color: #c7c7c7;
@@ -30,7 +32,9 @@
   --primary-bg-color: #00ff80;
   --primary-hover-bg-color: #00d46a;
   --secondary-bg-color: #0099ff;
-  --danger-bg-color: #ff3939;
+  --secondary-hover-bg-color: #0084db;
+  --danger-bg-color: #ff3c3c;
+  --danger-hover-bg-color: #ff1616;
   --shadow-color: #000000;
   --dark-grey: #8f8f8f;
   --placeholder-color: #2e2e2e;
@@ -52,7 +56,7 @@ body {
   min-width: 600px;
   background-color: var(--container-bg-color);
   padding: 2rem;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 4px 4px 10px var(--shadow-color);
 }
 
@@ -88,7 +92,7 @@ body {
   gap: 8px;
   font-weight: 500;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 
@@ -129,7 +133,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 5px;
   font-weight: 500;
   color: var(--dark-grey);
 }
@@ -146,27 +150,40 @@ body {
 }
 
 .task button {
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 6px;
+  border-radius: 2px;
   cursor: pointer;
-  padding: 5px;
+  padding: 6px;
+}
+
+.task button.btn-check{
+  background-color:  var(--primary-hover-bg-color);
 }
 
 .task button.btn-check:hover {
   background-color: var(--primary-bg-color);
-  color: var(--bg-color);
 }
 
-.btn-checked {
-  background-color: var(--primary-bg-color);
+.task button.btn-checked{
+  border: 1px solid var(--placeholder-color);
+background-color: var(--primary-bg-color);
+}
+
+.task button.btn-edit{
+  background-color: var(--secondary-hover-bg-color);
 }
 
 .task button.btn-edit:hover {
   background-color: var(--secondary-bg-color);
-  color: var(--bg-color);
+}
+
+.task button.btn-delete {
+  background-color: var(--danger-hover-bg-color);
 }
 
 .task button.btn-delete:hover {
@@ -174,9 +191,6 @@ body {
   color: var(--bg-color);
 }
 
-.icon {
-  pointer-events: none;
-}
 
 ::-webkit-input-placeholder {
   color: var(--placeholder-color);
@@ -212,7 +226,7 @@ input[type="radio"] {
   border: 2px solid var(--input-color);
   width: 1.2rem;
   height: 1.2rem;
-  border-radius: 50%;
+  border-radius: 2px;
   cursor: pointer;
 }
 

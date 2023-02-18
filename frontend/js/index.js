@@ -56,17 +56,14 @@ const saveTask = (text) => {
 
   const checkBtn = document.createElement('button')
   checkBtn.classList.add('btn-check')
-  checkBtn.innerHTML = '<i class="icon" data-feather="check-square"></i>'
   divButtons.appendChild(checkBtn)
 
   const editBtn = document.createElement('button')
   editBtn.classList.add('btn-edit')
-  editBtn.innerHTML = '<i class="icon" data-feather="edit"></i>'
   divButtons.appendChild(editBtn)
 
   const deleteBtn = document.createElement('button')
   deleteBtn.classList.add('btn-delete')
-  deleteBtn.innerHTML = '<i class="icon" data-feather="trash-2"></i>'
   divButtons.appendChild(deleteBtn)
 
   task.appendChild(divButtons)
