@@ -1,7 +1,6 @@
 const lightTheme = document.querySelector('#light');
 const darkTheme = document.querySelector('#dark');
 
-window.onload = () => getThemeFromLocalStorage()
 
 lightTheme.addEventListener('change', () => {
   const isChecked = lightTheme.checked

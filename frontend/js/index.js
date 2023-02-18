@@ -1,12 +1,31 @@
-const taskModal = document.querySelector('#task-modal')
 const taskInput = document.querySelector('#task-input')
-
-
 const addTaskForm = document.querySelector('#add-task-form')
 const tasksList = document.querySelector('.tasks-list')
 const emptyMessage = document.querySelector('.empty-message')
 
-const themeBtn = document.querySelector('#theme-btn')
+let tasks = new Array()
+
+window.onload = () => {
+  getTasksFromLocalStorage()
+  getThemeFromLocalStorage()
+}
+
+async function getTasksFromLocalStorage() {
+  const tasks = await JSON.parse(localStorage.getItem('tasks'))
+  tasks ? renderTasks(tasks) : console.log('No tasks found')
+}
+
+
+const renderTasks = (tasks) => {
+  tasks.forEach(task => {
+    saveTask(task)
+  })
+  feather.replace()
+}
+
+const saveTasksToLocalStorage = (tasks) => {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+}
 
 addTaskForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -20,11 +39,14 @@ addTaskForm.addEventListener('submit', (e) => {
   feather.replace()
 })
 
-function saveTask(text) {
+
+const saveTask = (text) => {
   emptyMessage.style.display = 'none'
 
   const task = document.createElement('li')
   task.classList.add('task')
+
+
 
   const taskText = document.createElement('h4')
   taskText.innerText = text
@@ -53,6 +75,10 @@ function saveTask(text) {
 
   taskInput.value = ''
   taskInput.focus()
+
+  tasks.push(task.innerText)
+
+  saveTasksToLocalStorage(tasks)
 }
 
 
@@ -71,6 +97,12 @@ document.addEventListener('click', (e) => {
   }
 
   if (targetEl.classList.contains('btn-delete')) {
+    tasks.forEach(task => {
+      if (task == parentEl.innerText) {
+        tasks.splice(tasks.indexOf(task), 1)
+      }
+    })
+    saveTasksToLocalStorage(tasks)
     parentEl.remove()
     if (tasksList.innerText == '')
       emptyMessage.style.display = 'flex'
