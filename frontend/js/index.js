@@ -1,6 +1,7 @@
 const taskModal = document.querySelector('#task-modal')
 const taskInput = document.querySelector('#task-input')
 
+
 const addTaskForm = document.querySelector('#add-task-form')
 const tasksList = document.querySelector('.tasks-list')
 const emptyMessage = document.querySelector('.empty-message')
