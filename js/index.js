@@ -11,8 +11,8 @@ window.onload = () => {
 }
 
 async function getTasksFromLocalStorage() {
-  const tasks = await JSON.parse(localStorage.getItem('tasks'))
-  tasks ? renderTasks(tasks) : console.log('No tasks found')
+  const storedTasks = await JSON.parse(localStorage.getItem('tasks'))
+  storedTasks ? renderTasks(storedTasks) : console.log('No tasks found')
 }
 
 
