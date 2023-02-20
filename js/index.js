@@ -5,21 +5,22 @@ const emptyMessage = document.querySelector('.empty-message')
 
 let tasks = new Array()
 
-
 window.onload = () => {
   //localStorage.clear()
-  getTasksFromLocalStorage()
   getThemeFromLocalStorage()
+  getTasksFromLocalStorage()
 }
 
 async function getTasksFromLocalStorage() {
-  tasks.push(JSON.parse(localStorage.getItem('tasks')))
-  tasks ? renderTasks(tasks) : console.log('No tasks found')
+  const storedTasks = (JSON.parse(localStorage.getItem('tasks')))
+  storedTasks ? renderTasks(storedTasks) : console.log('No tasks found')
 }
 
 
 const renderTasks = (tasks) => {
-  tasksList.innerHTML = `${tasks}`
+  tasks.forEach((task) => {
+    saveTask(task)
+  })
   feather.replace()
 }
 
@@ -71,7 +72,6 @@ const saveTask = (text) => {
 
   taskInput.value = ''
   taskInput.focus()
-
 
   tasks.push(task.innerText)
 
