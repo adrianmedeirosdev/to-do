@@ -13,9 +13,7 @@
 <br>
 
 <p align="center">
-<video controls autoplay loop>
-  <source src=".github/preview.mp4" type="video/mp4">
-</video>
+  <img src=".github/preview.gif" >
 </p>
 
 ## 🚀 Technologies
