@@ -12,7 +12,7 @@
 
 <br>
 
-<p align="center">
+<p>
   <img src=".github/preview.gif" >
 </p>
 
