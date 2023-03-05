@@ -1,12 +1,12 @@
-<h1 align="center"> To-do </h1>
+<h1> To-do </h1>
 
 
-<p align="center">
+<p >
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
-<p align="center">
+<p >
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
 
