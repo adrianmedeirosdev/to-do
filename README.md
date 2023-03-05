@@ -3,7 +3,7 @@
 
 <p >
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
+  <a href="#-license">License</a>
 </p>
 
 
@@ -23,8 +23,6 @@ This project was developed using these technologies:
 
 You can take a look by <a href="https://adrianmedeirosdev.github.io/to-do" target="_blank">clicking here</a>.
 
-## :memo: License
+## 📝 License
 
-<p><img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000"></p>.
-
----
+<p><img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000"></p>
