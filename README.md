@@ -3,8 +3,9 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000" >
 </a>
 <br>
-<br>
-<p>This project is for personal study purposes</p>
+
+##### # This project was made for personal study
+
 <p>
   <img  src=".github/preview.gif" >
 </p>
