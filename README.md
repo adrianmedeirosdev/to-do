@@ -1,8 +1,8 @@
-# To-do
+# 📋 To-do 
 
-<p>
+<p >
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license">License</a>
+  <a href="#-license">license</a>
 </p>
 
 <br>
@@ -19,7 +19,8 @@ This project was developed using these technologies:
 - Git e Github
 
 You can take a look by <a href="https://adrianmedeirosdev.github.io/to-do" target="_blank">clicking here</a>.
+### ⚖ License
+<a href="https://opensource.org/license/mit/">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000" >
+</a>
 
-### 📝 License
-
-<p><img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000"></p>
