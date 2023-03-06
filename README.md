@@ -18,5 +18,5 @@ This project was developed using these technologies:
 
 You can take a look by <a href="https://adrianmedeirosdev.github.io/to-do" target="_blank">clicking here</a>.
 ### ⚖ License
-<p> This project is licensed under the <a href="https://opensource.org/license/mit/" target="_blank">MIT License</a> </p>
+<p> This project is licensed under <a href="https://opensource.org/license/mit/" target="_blank">The MIT License</a> </p>
 
