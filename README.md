@@ -8,8 +8,8 @@
 
 This project was developed using these technologies:
 
-- HTML, CSS e JS
-- Git e Github
+- HTML, CSS and JS
+- Git and Github
 
 You can take a look by <a href="https://adrianmedeirosdev.github.io/to-do" target="_blank">clicking here</a>.
 ### ⚖ License
