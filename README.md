@@ -1,12 +1,5 @@
 # 📋 To-do 
 
-<p >
-  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license">license</a>
-</p>
-
-<br>
-
 <p>
   <img  src=".github/preview.gif" >
 </p>
